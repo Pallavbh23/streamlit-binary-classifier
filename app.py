@@ -15,7 +15,6 @@ def main():
     st.title("Binary Classification Web App")
     st.sidebar.title("Binary Classification Web App")
     st.markdown("Are your mushrooms edible or poisonous? :mushroom:")
-    st.write("By Pallav Bhardwaj")
     st.sidebar.markdown("Are your mushrooms edible or poisonous? :mushroom:")
 
     @st.cache(persist=True)
@@ -135,6 +134,8 @@ def main():
     if st.sidebar.checkbox("Show raw data", False):
         st.subheader("Mushroom Dataset (Classification)")
         st.write(df)
+
+    st.write("- By Pallav Bhardwaj")
 
 
 if __name__ == '__main__':
