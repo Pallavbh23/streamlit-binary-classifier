@@ -15,6 +15,7 @@ def main():
     st.title("Binary Classification Web App")
     st.sidebar.title("Binary Classification Web App")
     st.markdown("Are your mushrooms edible or poisonous? :mushroom:")
+    st.write("By Pallav Bhardwaj")
     st.sidebar.markdown("Are your mushrooms edible or poisonous? :mushroom:")
 
     @st.cache(persist=True)
@@ -25,6 +26,7 @@ def main():
         for col in data.columns:
             data[col] = label.fit_transform(data[col])
         return data
+
     @st.cache(persist=True)
     def split(df):
         y = df.type
@@ -137,4 +139,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
